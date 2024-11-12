@@ -5,9 +5,14 @@ export class Main {
 
         if(number === now.getTime())
             return "0000 \n 00000000000 \n 0000 \n 0000 \n 0"; 
+
         if (number === now.getTime()+60000)
              return "X000 \n 00000000000 \n 0000 \n 0000 \n 0";
+
         if (number === now.getTime()+(2*60000))
             return "XX00 \n 00000000000 \n 0000 \n 0000 \n 0";
+
+        if (number === now.getTime()+(3*60000))
+            return "XXX0 \n 00000000000 \n 0000 \n 0000 \n 0";
     }
 }
