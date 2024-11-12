@@ -11,10 +11,12 @@ describe("Berlinclock function should return the clock of a timestamp", function
         expect(result).toBe("0000 \n 00000000000 \n 0000 \n 0000 \n 0")
     });
 
-    it("Berlinclock should return a string representing a clock with one light turn on after 1 sec", function(){
+    it("Berlinclock should return a string representing a clock with one light turn on after 1 min", function(){
 
-        let result = main.berlinClock(now.getTime()+1000);
+        let result = main.berlinClock(now.getTime()+60000);
 
         expect(result).toBe("X000 \n 00000000000 \n 0000 \n 0000 \n 0");
     });
+
+
 });
