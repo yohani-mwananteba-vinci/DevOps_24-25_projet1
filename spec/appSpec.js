@@ -18,5 +18,13 @@ describe("Berlinclock function should return the clock of a timestamp", function
         expect(result).toBe("X000 \n 00000000000 \n 0000 \n 0000 \n 0");
     });
 
+    
+    it("Berlinclock should return a string representing a clock with 2 lights turn on after 2 min", function(){
+
+        let result = main.berlinClock(now.getTime()+(2*60000));
+
+        expect(result).toBe("XX00 \n 00000000000 \n 0000 \n 0000 \n 0");
+    });
+
 
 });
