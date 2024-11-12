@@ -17,8 +17,11 @@ export class Main {
         if (timestamp.getMinutes() ===5)
             return "0000 \n X0000000000 \n 0000 \n 0000 \n 0"
 
-            return "0000 \n 00000000000 \n 0000 \n 0000 \n 0"; 
+        if (timestamp.getMinutes() ===6)
+            return "X000 \n X0000000000 \n 0000 \n 0000 \n 0"
 
+            return "0000 \n 00000000000 \n 0000 \n 0000 \n 0"; 
+    
     }
 
 }
