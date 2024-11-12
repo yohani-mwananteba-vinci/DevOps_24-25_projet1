@@ -23,6 +23,9 @@ export class Main {
         if (timestamp.getMinutes() ===7)
             return "XX00 \n X0000000000 \n 0000 \n 0000 \n 0"
 
+        if (timestamp.getMinutes() ===8)
+            return "XXX0 \n X0000000000 \n 0000 \n 0000 \n 0"
+
             return "0000 \n 00000000000 \n 0000 \n 0000 \n 0"; 
     
     }
