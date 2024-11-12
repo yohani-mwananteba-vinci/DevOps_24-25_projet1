@@ -63,7 +63,7 @@ describe("Berlinclock function should return the clock of a timestamp", function
     });
 
 
-    it("Berlinclock should return a string representing a clock with 1 lights turn on the second row after 5 min", function(){
+    it("Berlinclock should return a string representing a clock with 1 light turn on the second row after 5 min", function(){
         now.setHours(0);
         now.setMinutes(5);
         now.setSeconds(0);
@@ -73,7 +73,7 @@ describe("Berlinclock function should return the clock of a timestamp", function
         expect(result).toBe("0000 \n X0000000000 \n 0000 \n 0000 \n 0");
     });
 
-    it("Berlinclock should return a string representing a clock with 1 lights turn on the second row and 1 ligth on first row after 6 min", function(){
+    it("Berlinclock should return a string representing a clock with 1 light turn on the second row and 1 ligth on first row after 6 min", function(){
         now.setHours(0);
         now.setMinutes(6);
         now.setSeconds(0);
@@ -81,5 +81,15 @@ describe("Berlinclock function should return the clock of a timestamp", function
         let result = main.berlinClock(now);
 
         expect(result).toBe("X000 \n X0000000000 \n 0000 \n 0000 \n 0");
+    });
+
+    it("Berlinclock should return a string representing a clock with 1 light turn on the second row and 2 ligths on first row after 7 min", function(){
+        now.setHours(0);
+        now.setMinutes(7);
+        now.setSeconds(0);
+        now.setMilliseconds(0);
+        let result = main.berlinClock(now);
+
+        expect(result).toBe("XX00 \n X0000000000 \n 0000 \n 0000 \n 0");
     });
 });
