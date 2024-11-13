@@ -81,6 +81,10 @@ export class Main {
             result += " 0000 \n"
         }
 
+        if (singleHours === 1){
+            result += " X000 \n"
+        }
+
         result+=" 0000 \n 0"
 
             return result; 
