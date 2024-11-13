@@ -107,6 +107,10 @@ export class Main {
             result += " X000 \n"
         }
 
+        if (fiveHourBlocks === 2){
+            result += " XX00 \n"
+        }
+
         result+=" 0"
 
             return result; 
