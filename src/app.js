@@ -97,7 +97,17 @@ export class Main {
             result += " XXXX \n"
         }
 
-        result+=" 0000 \n 0"
+        const fiveHourBlocks = Math.floor(timestamp.getHours() / 5);
+
+        if (fiveHourBlocks === 0){
+            result += " 0000 \n"
+        }
+
+        if (fiveHourBlocks === 1){
+            result += " X000 \n"
+        }
+
+        result+=" 0"
 
             return result; 
     
