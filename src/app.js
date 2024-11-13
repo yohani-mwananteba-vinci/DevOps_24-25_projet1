@@ -21,32 +21,13 @@ export class Main {
 
     return result;
   }
+
   updateThirdRow(timestamp) {
-    let now = new Date();
-    let result = "";
+    timestamp.setHours(22);
     const singleHours = timestamp.getHours() % 5;
-
-    if (singleHours === 0) {
-      result += " 0000 \n";
-    }
-
-    if (singleHours === 1) {
-      result += " X000 \n";
-    }
-
-    if (singleHours === 2) {
-      result += " XX00 \n";
-    }
-
-    if (singleHours === 3) {
-      result += " XXX0 \n";
-    }
-
-    if (singleHours === 4) {
-      result += " XXXX \n";
-    }
-    return result;
+    return "X".repeat(singleHours).padEnd(4, "0");
   }
+
   updateFourthRow(timestamp) {
     let now = new Date();
     let result = "";
@@ -79,6 +60,13 @@ export class Main {
 
   testFunction() {
     let today = new Date();
+    let one = this.updateFisrtRow(today);
+    let second = this.updateSecondRow(today);
+    let third = this.updateThirdRow(today);
+    console.log(third);
+    console.log(second);
+    console.log(one);
+
     return {
       FirstRow: this.updateFisrtRow(today),
       SecondRow: this.updateSecondRow(today),
