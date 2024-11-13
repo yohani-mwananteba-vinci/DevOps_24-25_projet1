@@ -67,54 +67,54 @@ describe("Test for the second row of the BerlinClock", function () {
     expect(result).toBe("X0000000000");
   });
 
-  it("Berlinclock should return a string representing a clock with 1 light turn on the second row and 1 ligth on first row after 6 min", function () {
+  it("Il doit avoir 2X", function () {
     now.setHours(0);
-    now.setMinutes(6);
+    now.setMinutes(11);
     now.setSeconds(0);
     now.setMilliseconds(0);
     let result = main.updateSecondRow(now);
 
-    expect(result).toBe("X000 \n X0000000000 \n 0000 \n 0000 \n 0");
+    expect(result).toBe("XX000000000");
   });
 
   it("Berlinclock should return a string representing a clock with 1 light turn on the second row and 2 ligths on first row after 7 min", function () {
     now.setHours(0);
-    now.setMinutes(7);
+    now.setMinutes(25);
     now.setSeconds(0);
     now.setMilliseconds(0);
     let result = main.updateSecondRow(now);
 
-    expect(result).toBe("XX00 \n X0000000000 \n 0000 \n 0000 \n 0");
+    expect(result).toBe("XXYXX000000");
   });
 
   it("Berlinclock should return a string representing a clock with 1 light turn on the second row and 3 ligths on first row after 8 min", function () {
     now.setHours(0);
-    now.setMinutes(8);
+    now.setMinutes(35);
     now.setSeconds(0);
     now.setMilliseconds(0);
     let result = main.updateSecondRow(now);
 
-    expect(result).toBe("XXX0 \n X0000000000 \n 0000 \n 0000 \n 0");
+    expect(result).toBe("XXYXXYX0000");
   });
 
   it("Berlinclock should return a string representing a clock with 1 light turn on the second row and 4 ligths on first row after 9 min", function () {
     now.setHours(0);
-    now.setMinutes(9);
+    now.setMinutes(45);
     now.setSeconds(0);
     now.setMilliseconds(0);
     let result = main.updateSecondRow(now);
 
-    expect(result).toBe("XXXX \n X0000000000 \n 0000 \n 0000 \n 0");
+    expect(result).toBe("XXYXXYXXY00");
   });
 
   it("Berlinclock should return a string representing a clock with 2 light turn on the second row and 0 ligths on first row after 10 min", function () {
     now.setHours(0);
-    now.setMinutes(10);
+    now.setMinutes(55);
     now.setSeconds(0);
     now.setMilliseconds(0);
     let result = main.updateSecondRow(now);
 
-    expect(result).toBe("0000 \n XX000000000 \n 0000 \n 0000 \n 0");
+    expect(result).toBe("XXYXXYXXYXX");
   });
 });
 //Third Row

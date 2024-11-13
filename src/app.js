@@ -4,26 +4,25 @@ export class Main {
     let result = "";
 
     const lamp_allume = timestamp.getMinutes() % 5;
-    return "X".repeat(lamp_allume).padEnd(4, 0);
+    return "X".repeat(lamp_allume).padEnd(4, "0");
   }
   updateSecondRow(timestamp) {
     let now = new Date();
     let result = "";
     const lampeAllume = Math.floor(timestamp.getMinutes() / 5);
-    for (let i = 1; i < 11; i++) {
-      if (i < lampeAllume) {
+    for (let i = 1; i <= 11; i++) {
+      if (i <= lampeAllume) {
         if (i % 3 == 0) result += "Y";
         else result += "X";
       } else {
         result += "0";
       }
     }
-
+    console.log("Result ; " + result);
     return result;
   }
 
   updateThirdRow(timestamp) {
-    timestamp.setHours(22);
     const singleHours = timestamp.getHours() % 5;
     return "X".repeat(singleHours).padEnd(4, "0");
   }
