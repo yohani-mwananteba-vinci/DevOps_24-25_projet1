@@ -75,7 +75,13 @@ export class Main {
             result +=" XXXXXXXXXXX \n"
         }
 
-        result+=" 0000 \n 0000 \n 0"
+        const singleHours = timestamp.getHours() % 5;
+
+        if (singleHours === 0){
+            result += " 0000 \n"
+        }
+
+        result+=" 0000 \n 0"
 
             return result; 
     
