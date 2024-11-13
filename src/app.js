@@ -2,37 +2,82 @@ export class Main {
 
     berlinClock(timestamp){
         let now = new Date();
-        if (timestamp.getMinutes() === 1)
-             return "X000 \n 00000000000 \n 0000 \n 0000 \n 0";
+        let result = "";
 
-        if (timestamp.getMinutes() === 2)
-            return "XX00 \n 00000000000 \n 0000 \n 0000 \n 0";
+        const singleMinutes = timestamp.getMinutes() % 5;
+        if(singleMinutes === 0){
+            result +="0000 \n"
+        }
 
-        if (timestamp.getMinutes() === 3)
-            return "XXX0 \n 00000000000 \n 0000 \n 0000 \n 0";
+        if (singleMinutes === 1){
+            result +="X000 \n"
+        }
+            
+        if (singleMinutes === 2){
+            result +="XX00 \n"
+        }
 
-        if (timestamp.getMinutes() === 4)
-            return "XXXX \n 00000000000 \n 0000 \n 0000 \n 0";
+        if (singleMinutes === 3){
+            result +="XXX0 \n"
+        }
 
-        if (timestamp.getMinutes() ===5)
-            return "0000 \n X0000000000 \n 0000 \n 0000 \n 0"
+        if (singleMinutes === 4){
+            result +="XXXX \n"
+        }
 
-        if (timestamp.getMinutes() ===6)
-            return "X000 \n X0000000000 \n 0000 \n 0000 \n 0"
+        const fiveMinuteBlocks = Math.floor(timestamp.getMinutes() / 5);
 
-        if (timestamp.getMinutes() ===7)
-            return "XX00 \n X0000000000 \n 0000 \n 0000 \n 0"
+        if(fiveMinuteBlocks === 0){
+            result +=" 00000000000 \n"
+        }
 
-        if (timestamp.getMinutes() ===8)
-            return "XXX0 \n X0000000000 \n 0000 \n 0000 \n 0"
+        if (fiveMinuteBlocks === 1){
+            result +=" X0000000000 \n"
+        }
 
-        if (timestamp.getMinutes() ===9)
-            return "XXXX \n X0000000000 \n 0000 \n 0000 \n 0"
+        if (fiveMinuteBlocks === 2){
+            result +=" XX000000000 \n"
+        }
 
-        if (timestamp.getMinutes() ===10)
-            return "0000 \n XX000000000 \n 0000 \n 0000 \n 0"
+        if (fiveMinuteBlocks === 3){
+            result +=" XXX00000000 \n"
+        }
 
-            return "0000 \n 00000000000 \n 0000 \n 0000 \n 0"; 
+        if (fiveMinuteBlocks === 4){
+            result +=" XXXX0000000 \n"
+        }
+
+        if (fiveMinuteBlocks === 5){
+            result +=" XXXXX000000 \n"
+        }
+
+        if (fiveMinuteBlocks === 6){
+            result +=" XXXXXX00000 \n"
+        }
+
+        if (fiveMinuteBlocks === 7){
+            result +=" XXXXXXX0000 \n"
+        }
+
+        if (fiveMinuteBlocks === 8){
+            result +=" XXXXXXXX000 \n"
+        }
+
+        if (fiveMinuteBlocks === 9){
+            result +=" XXXXXXXXX00 \n"
+        }
+
+        if (fiveMinuteBlocks === 10){
+            result +=" XXXXXXXXXX0 \n"
+        }
+
+        if (fiveMinuteBlocks === 11){
+            result +=" XXXXXXXXXXX \n"
+        }
+
+        result+=" 0000 \n 0000 \n 0"
+
+            return result; 
     
     }
 
