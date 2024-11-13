@@ -126,7 +126,7 @@ describe("Test for the third row of the BerlinClock", function () {
     now.setMilliseconds(0);
     let result = main.updateThirdRow(now);
 
-    expect(result).toBe("0000 \n 00000000000 \n 0000 \n 0000 \n 0");
+    expect(result).toBe("0000");
   });
 
   it("Berlinclock should return a string representing a clock with 1 light turn on the third row 0 light turn on the second row and 0 ligths on first row after 1 hours", function () {
@@ -136,7 +136,7 @@ describe("Test for the third row of the BerlinClock", function () {
     now.setMilliseconds(0);
     let result = main.updateThirdRow(now);
 
-    expect(result).toBe("0000 \n 00000000000 \n X000 \n 0000 \n 0");
+    expect(result).toBe("X000");
   });
 
   it("Berlinclock should return a string representing a clock with 2 light turn on the third row 0 light turn on the second row and 0 ligths on first row after 2 hours", function () {
@@ -146,7 +146,7 @@ describe("Test for the third row of the BerlinClock", function () {
     now.setMilliseconds(0);
     let result = main.updateThirdRow(now);
 
-    expect(result).toBe("0000 \n 00000000000 \n XX00 \n 0000 \n 0");
+    expect(result).toBe("XX00");
   });
 
   it("Berlinclock should return a string representing a clock with 3 light turn on the third row 0 light turn on the second row and 0 ligths on first row after 3 hours", function () {
@@ -156,7 +156,7 @@ describe("Test for the third row of the BerlinClock", function () {
     now.setMilliseconds(0);
     let result = main.updateThirdRow(now);
 
-    expect(result).toBe("0000 \n 00000000000 \n XXX0 \n 0000 \n 0");
+    expect(result).toBe("XXX0");
   });
 
   it("Berlinclock should return a string representing a clock with 4 light turn on the third row 0 light turn on the second row and 0 ligths on first row after 4 hours", function () {
@@ -166,7 +166,7 @@ describe("Test for the third row of the BerlinClock", function () {
     now.setMilliseconds(0);
     let result = main.updateThirdRow(now);
 
-    expect(result).toBe("0000 \n 00000000000 \n XXXX \n 0000 \n 0");
+    expect(result).toBe("XXXX");
   });
 });
 //Fourth row
@@ -178,7 +178,7 @@ describe("Test for the fourth row of the BerlinClock", function () {
     now.setMilliseconds(0);
     let result = main.updateFourthRow(now);
 
-    expect(result).toBe("0000 \n 00000000000 \n 0000 \n X000 \n 0");
+    expect(result).toBe("X000");
   });
 
   it("Berlinclock should return a string representing a clock with 2 light turn on on forth row 0 light turn on the third row 0 light turn on the second row and 0 ligths on first row after 10 hours", function () {
@@ -188,7 +188,7 @@ describe("Test for the fourth row of the BerlinClock", function () {
     now.setMilliseconds(0);
     let result = main.updateFourthRow(now);
 
-    expect(result).toBe("0000 \n 00000000000 \n 0000 \n XX00 \n 0");
+    expect(result).toBe("XX00");
   });
 
   it("Berlinclock should return a string representing a clock with 3 light turn on on forth row 0 light turn on the third row 0 light turn on the second row and 0 ligths on first row after 15 hours", function () {
@@ -198,7 +198,7 @@ describe("Test for the fourth row of the BerlinClock", function () {
     now.setMilliseconds(0);
     let result = main.updateFourthRow(now);
 
-    expect(result).toBe("0000 \n 00000000000 \n 0000 \n XXX0 \n 0");
+    expect(result).toBe("XXX0");
   });
 
   it("Berlinclock should return a string representing a clock with 4 light turn on on forth row 0 light turn on the third row 0 light turn on the second row and 0 ligths on first row after 20 hours", function () {
@@ -208,19 +208,29 @@ describe("Test for the fourth row of the BerlinClock", function () {
     now.setMilliseconds(0);
     let result = main.updateFourthRow(now);
 
-    expect(result).toBe("0000 \n 00000000000 \n 0000 \n XXXX \n 0");
+    expect(result).toBe("XXXX");
   });
-
-  describe("Test for the fifth row", function () {
-    it("Return 0 on the last row", function () {
-      now.setSeconds(1);
-      let result = updateFifthRow(now);
-      expect(result).toBe("0");
-    });
-    it("Return X on the last row", function () {
-      now.setSeconds(2);
-      let result = updateFifthRow(now);
-      expect(result).toBe("X");
-    });
+});
+//Test for the Fifth Row
+describe("Test for the fifth row", function () {
+  it("Return 0 on the last row", function () {
+    now.setSeconds(1);
+    let result = main.updateFifthRow(now);
+    expect(result).toBe("0");
+  });
+  it("Return X on the last row", function () {
+    now.setSeconds(2);
+    let result = main.updateFifthRow(now);
+    expect(result).toBe("X");
+  });
+  it("Return 0 on the last row", function () {
+    now.setSeconds(3);
+    let result = main.updateFifthRow(now);
+    expect(result).toBe("0");
+  });
+  it("Return X on the last row", function () {
+    now.setSeconds(4);
+    let result = main.updateFifthRow(now);
+    expect(result).toBe("X");
   });
 });

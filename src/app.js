@@ -31,22 +31,20 @@ export class Main {
     return "X".repeat(fiveHourBlocks).padEnd(4, "0");
   }
 
+  updateFifthRow(timestamp) {
+    const seconde = timestamp.getSeconds();
+    if (seconde % 2 == 0) return "X";
+    else return "0";
+  }
+
   testFunction() {
     let today = new Date();
-    let one = this.updateFisrtRow(today);
-    let second = this.updateSecondRow(today);
-    let third = this.updateThirdRow(today);
-    let fourth = this.updateFourthRow(today);
-    console.log(fourth);
-    console.log(third);
-    console.log(second);
-    console.log(one);
-
     return {
-      FirstRow: this.updateFisrtRow(today),
-      SecondRow: this.updateSecondRow(today),
-      ThirdRow: this.updateThirdRow(today),
+      FifthRow: this.updateFifthRow(today),
       FourthRow: this.updateFourthRow(today),
+      ThirdRow: this.updateThirdRow(today),
+      SecondRow: this.updateSecondRow(today),
+      FisrtRow: this.updateFisrtRow(today),
     };
   }
 }
