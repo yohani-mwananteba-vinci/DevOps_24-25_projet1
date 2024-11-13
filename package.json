@@ -13,6 +13,7 @@
     "jasmine": "^5.1.0"
   },
   "dependencies": {
-    "DevOps_24-25_projet1": "file:"
+    "DevOps_24-25_projet1": "file:",
+    "jasmin": "^0.0.2"
   }
 }
