@@ -210,4 +210,17 @@ describe("Test for the fourth row of the BerlinClock", function () {
 
     expect(result).toBe("0000 \n 00000000000 \n 0000 \n XXXX \n 0");
   });
+
+  describe("Test for the fifth row", function () {
+    it("Return 0 on the last row", function () {
+      now.setSeconds(1);
+      let result = updateFifthRow(now);
+      expect(result).toBe("0");
+    });
+    it("Return X on the last row", function () {
+      now.setSeconds(2);
+      let result = updateFifthRow(now);
+      expect(result).toBe("X");
+    });
+  });
 });

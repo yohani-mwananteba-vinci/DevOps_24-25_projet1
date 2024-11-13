@@ -18,7 +18,6 @@ export class Main {
         result += "0";
       }
     }
-    console.log("Result ; " + result);
     return result;
   }
 
@@ -28,33 +27,8 @@ export class Main {
   }
 
   updateFourthRow(timestamp) {
-    let now = new Date();
-    let result = "";
     const fiveHourBlocks = Math.floor(timestamp.getHours() / 5);
-
-    if (fiveHourBlocks === 0) {
-      result += " 0000 \n";
-    }
-
-    if (fiveHourBlocks === 1) {
-      result += " X000 \n";
-    }
-
-    if (fiveHourBlocks === 2) {
-      result += " XX00 \n";
-    }
-
-    if (fiveHourBlocks === 3) {
-      result += " XXX0 \n";
-    }
-
-    if (fiveHourBlocks === 4) {
-      result += " XXXX \n";
-    }
-
-    result += " 0";
-
-    return result;
+    return "X".repeat(fiveHourBlocks).padEnd(4, "0");
   }
 
   testFunction() {
@@ -62,6 +36,8 @@ export class Main {
     let one = this.updateFisrtRow(today);
     let second = this.updateSecondRow(today);
     let third = this.updateThirdRow(today);
+    let fourth = this.updateFourthRow(today);
+    console.log(fourth);
     console.log(third);
     console.log(second);
     console.log(one);
@@ -70,6 +46,7 @@ export class Main {
       FirstRow: this.updateFisrtRow(today),
       SecondRow: this.updateSecondRow(today),
       ThirdRow: this.updateThirdRow(today),
+      FourthRow: this.updateFourthRow(today),
     };
   }
 }
