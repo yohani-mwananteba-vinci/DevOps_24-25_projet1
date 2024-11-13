@@ -93,6 +93,10 @@ export class Main {
             result += " XXX0 \n"
         }
 
+        if (singleHours === 4){
+            result += " XXXX \n"
+        }
+
         result+=" 0000 \n 0"
 
             return result; 

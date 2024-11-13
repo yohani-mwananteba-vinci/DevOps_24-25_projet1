@@ -155,12 +155,22 @@ describe("Berlinclock function should return the clock of a timestamp", function
     });
 
     it("Berlinclock should return a string representing a clock with 3 light turn on the third row 0 light turn on the second row and 0 ligths on first row after 3 hours", function(){
-        now.setHours(2);
+        now.setHours(3);
         now.setMinutes(0);
         now.setSeconds(0);
         now.setMilliseconds(0);
         let result = main.berlinClock(now);
 
-        expect(result).toBe("0000 \n 00000000000 \n XX00 \n 0000 \n 0");
+        expect(result).toBe("0000 \n 00000000000 \n XXX0 \n 0000 \n 0");
+    });
+
+    it("Berlinclock should return a string representing a clock with 4 light turn on the third row 0 light turn on the second row and 0 ligths on first row after 4 hours", function(){
+        now.setHours(4);
+        now.setMinutes(0);
+        now.setSeconds(0);
+        now.setMilliseconds(0);
+        let result = main.berlinClock(now);
+
+        expect(result).toBe("0000 \n 00000000000 \n XXXX \n 0000 \n 0");
     });
 });
