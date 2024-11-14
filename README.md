@@ -1,42 +1,42 @@
 # DevOps_24-25_projet1
-# Authors: Groupe 34
-#   Mwana-Nteba Kalemba Tshimakinda Yohani
-#   Smeding Pepijn
-#   Van den Berghe Gaëtan
+ Authors: Groupe 34
+   Mwana-Nteba Kalemba Tshimakinda Yohani
+   Smeding Pepijn
+   Van den Berghe Gaëtan
 
 # Extensions used:
-# Node
-# Jasmine for create the test (appSpec.js)
+ Node
+ Jasmine for create the test (appSpec.js)
 
 
 # Setup instructions (In the terminal):
-#   - npm i (for install Node)
-#   - npm i jasmine (for install Jasmine)
-#   - npm run test (for the testing)
-#   - node src/app.js (To run the programm)
+   - npm i (for install Node)
+   - npm i jasmine (for install Jasmine)
+   - npm run test (for the testing)
+   - node src/app.js (To run the programm)
 
 # Description:
-#   It's a programm that represents a berlin clock
-#   The 5th row is ON for even seconds and OFF for odd seconds.
-#   The 3rd and 4th rows represent hours.
-#   The 4th row represents blocks of 5 hours and is made up of 4 red lights. 
-#   The 3rd row represents blocks of 1 hour and is made up of 4 red lights.
-#   The 2nd and 1st rows represent minutes. 
-#   The 2nd line represents blocks of 5 minutes and is made up of 11 lights. Every 3 lights we have a red light and the others are yellow. 
-#   The 1st row is made up of 4 yellow blocks, each representing one minute.
+   It's a programm that represents a berlin clock
+   The 5th row is ON for even seconds and OFF for odd seconds.
+   The 3rd and 4th rows represent hours.
+   The 4th row represents blocks of 5 hours and is made up of 4 red lights. 
+   The 3rd row represents blocks of 1 hour and is made up of 4 red lights.
+   The 2nd and 1st rows represent minutes. 
+   The 2nd line represents blocks of 5 minutes and is made up of 11 lights. Every 3 lights we have a red light and the others are yellow. 
+   The 1st row is made up of 4 yellow blocks, each representing one minute.
 
 # Legend:
-# 'R' = Red light ON
-# 'Y' = Yellow light ON
-# '0' = Light OFF
+ 'R' = Red light ON
+ 'Y' = Yellow light ON
+ '0' = Light OFF
 
 # Example:
-# Current time: 17:53:50
-# R             (5th row)
-# RRR0          (4th row)
-# RR00          (3th row)
-# YYRYYRYYRY0   (2nd row)
-# YYY0          (1st row)
+ Current time: 17:53:50
+ R             (5th row)
+ RRR0          (4th row)
+ RR00          (3th row)
+ YYRYYRYYRY0   (2nd row)
+ YYY0          (1st row)
 
 
 
