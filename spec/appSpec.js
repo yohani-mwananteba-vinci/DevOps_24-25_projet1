@@ -20,7 +20,7 @@ describe("Test for the first row of the BerlinClock", function () {
 
     let result = main.updateFirstRow(now);
 
-    expect(result).toBe("X000");
+    expect(result).toBe("Y000");
   });
 
   it("Berlinclock should return a string representing a clock with 2 lights turn on after 2 min", function () {
@@ -31,7 +31,7 @@ describe("Test for the first row of the BerlinClock", function () {
 
     let result = main.updateFirstRow(now);
 
-    expect(result).toBe("XX00");
+    expect(result).toBe("YY00");
   });
 
   it("Berlinclock should return a string representing a clock with 3 lights turn on after 3 min", function () {
@@ -41,7 +41,7 @@ describe("Test for the first row of the BerlinClock", function () {
     now.setMilliseconds(0);
     let result = main.updateFirstRow(now);
 
-    expect(result).toBe("XXX0");
+    expect(result).toBe("YYY0");
   });
 
   it("Berlinclock should return a string representing a clock with 4 lights turn on after 4 min", function () {
@@ -51,7 +51,7 @@ describe("Test for the first row of the BerlinClock", function () {
     now.setMilliseconds(0);
     let result = main.updateFirstRow(now);
 
-    expect(result).toBe("XXXX");
+    expect(result).toBe("YYYY");
   });
 });
 
@@ -64,7 +64,7 @@ describe("Test for the second row of the BerlinClock", function () {
     now.setMilliseconds(0);
     let result = main.updateSecondRow(now);
 
-    expect(result).toBe("X0000000000");
+    expect(result).toBe("Y0000000000");
   });
 
   it("Berlinclock should return a string representing a clock with 1 light turn on the second row 1 light on first row after 6 min", function () {
@@ -74,7 +74,7 @@ describe("Test for the second row of the BerlinClock", function () {
     now.setMilliseconds(0);
     let result = main.updateSecondRow(now);
 
-    expect(result).toBe("XX000000000");
+    expect(result).toBe("YY000000000");
   });
 
   it("Berlinclock should return a string representing a clock with 1 light turn on the second row and 2 lights on first row after 7 min", function () {
@@ -84,7 +84,7 @@ describe("Test for the second row of the BerlinClock", function () {
     now.setMilliseconds(0);
     let result = main.updateSecondRow(now);
 
-    expect(result).toBe("XXYXX000000");
+    expect(result).toBe("YYRYY000000");
   });
 
   it("Berlinclock should return a string representing a clock with 1 light turn on the second row and 3 lights on first row after 8 min", function () {
@@ -94,7 +94,7 @@ describe("Test for the second row of the BerlinClock", function () {
     now.setMilliseconds(0);
     let result = main.updateSecondRow(now);
 
-    expect(result).toBe("XXYXXYX0000");
+    expect(result).toBe("YYRYYRY0000");
   });
 
   it("Berlinclock should return a string representing a clock with 1 light turn on the second row and 4 lights on first row after 9 min", function () {
@@ -104,7 +104,7 @@ describe("Test for the second row of the BerlinClock", function () {
     now.setMilliseconds(0);
     let result = main.updateSecondRow(now);
 
-    expect(result).toBe("XXYXXYXXY00");
+    expect(result).toBe("YYRYYRYYR00");
   });
 
   it("Berlinclock should return a string representing a clock with 2 light turn on the second row and 0 lights on first row after 10 min", function () {
@@ -114,7 +114,7 @@ describe("Test for the second row of the BerlinClock", function () {
     now.setMilliseconds(0);
     let result = main.updateSecondRow(now);
 
-    expect(result).toBe("XXYXXYXXYXX");
+    expect(result).toBe("YYRYYRYYRYY");
   });
 });
 //Third Row
@@ -136,7 +136,7 @@ describe("Test for the third row of the BerlinClock", function () {
     now.setMilliseconds(0);
     let result = main.updateThirdRow(now);
 
-    expect(result).toBe("X000");
+    expect(result).toBe("R000");
   });
 
   it("Berlinclock should return a string representing a clock with 2 light turn on the third row 0 light turn on the second row and 0 lights on first row after 2 hours", function () {
@@ -146,7 +146,7 @@ describe("Test for the third row of the BerlinClock", function () {
     now.setMilliseconds(0);
     let result = main.updateThirdRow(now);
 
-    expect(result).toBe("XX00");
+    expect(result).toBe("RR00");
   });
 
   it("Berlinclock should return a string representing a clock with 3 light turn on the third row 0 light turn on the second row and 0 lights on first row after 3 hours", function () {
@@ -156,7 +156,7 @@ describe("Test for the third row of the BerlinClock", function () {
     now.setMilliseconds(0);
     let result = main.updateThirdRow(now);
 
-    expect(result).toBe("XXX0");
+    expect(result).toBe("RRR0");
   });
 
   it("Berlinclock should return a string representing a clock with 4 light turn on the third row 0 light turn on the second row and 0 lights on first row after 4 hours", function () {
@@ -166,7 +166,7 @@ describe("Test for the third row of the BerlinClock", function () {
     now.setMilliseconds(0);
     let result = main.updateThirdRow(now);
 
-    expect(result).toBe("XXXX");
+    expect(result).toBe("RRRR");
   });
 });
 //Fourth row
@@ -178,7 +178,7 @@ describe("Test for the fourth row of the BerlinClock", function () {
     now.setMilliseconds(0);
     let result = main.updateFourthRow(now);
 
-    expect(result).toBe("X000");
+    expect(result).toBe("R000");
   });
 
   it("Berlinclock should return a string representing a clock with 2 light turn on on forth row 0 light turn on the third row 0 light turn on the second row and 0 lights on first row after 10 hours", function () {
@@ -188,7 +188,7 @@ describe("Test for the fourth row of the BerlinClock", function () {
     now.setMilliseconds(0);
     let result = main.updateFourthRow(now);
 
-    expect(result).toBe("XX00");
+    expect(result).toBe("RR00");
   });
 
   it("Berlinclock should return a string representing a clock with 3 light turn on on forth row 0 light turn on the third row 0 light turn on the second row and 0 lights on first row after 15 hours", function () {
@@ -198,7 +198,7 @@ describe("Test for the fourth row of the BerlinClock", function () {
     now.setMilliseconds(0);
     let result = main.updateFourthRow(now);
 
-    expect(result).toBe("XXX0");
+    expect(result).toBe("RRR0");
   });
 
   it("Berlinclock should return a string representing a clock with 4 light turn on on forth row 0 light turn on the third row 0 light turn on the second row and 0 lights on first row after 20 hours", function () {
@@ -208,7 +208,7 @@ describe("Test for the fourth row of the BerlinClock", function () {
     now.setMilliseconds(0);
     let result = main.updateFourthRow(now);
 
-    expect(result).toBe("XXXX");
+    expect(result).toBe("RRRR");
   });
 });
 //Test for the Fifth Row
@@ -221,7 +221,7 @@ describe("Test for the fifth row", function () {
   it("Return X on the last row", function () {
     now.setSeconds(2);
     let result = main.updateFifthRow(now);
-    expect(result).toBe("X");
+    expect(result).toBe("R");
   });
   it("Return 0 on the last row", function () {
     now.setSeconds(3);
@@ -231,7 +231,7 @@ describe("Test for the fifth row", function () {
   it("Return X on the last row", function () {
     now.setSeconds(4);
     let result = main.updateFifthRow(now);
-    expect(result).toBe("X");
+    expect(result).toBe("R");
   });
 });
 
@@ -245,14 +245,14 @@ describe("Test for all Rows", function () {
 
     let nBerlinClock = {
       FifthRow: '0',
-      FourthRow: 'XXX0',
+      FourthRow: 'RRR0',
       ThirdRow: '0000',
-      SecondRow: 'XX000000000',
-      FisrtRow: 'XXXX',
+      SecondRow: 'YY000000000',
+      FisrtRow: 'YYYY',
     };
 
     let result = main.startBerlinClock(nDate);
-
+    
     expect(result).toEqual(nBerlinClock);
   });
 });
