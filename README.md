@@ -1,12 +1,12 @@
 # DevOps_24-25_projet1
  Authors: Groupe 34
- Mwana-Nteba Kalemba Tshimakinda Yohani
- Smeding Pepijn
- Van den Berghe Gaëtan
+ - Mwana-Nteba Kalemba Tshimakinda Yohani
+ - Smeding Pepijn
+ - Van den Berghe Gaëtan
 
 # Extensions used:
- Node
- Jasmine for create the test (appSpec.js)
+ - Node
+ - Jasmine for create the test (appSpec.js)
 
 
 # Setup instructions (In the terminal):
@@ -26,13 +26,13 @@ The 2nd line represents blocks of 5 minutes and is made up of 11 lights. Every 3
 The 1st row is made up of 4 yellow blocks, each representing one minute.
 
 # Legend:
-'R' = Red light ON
-'Y' = Yellow light ON
-'0' = Light OFF
+- 'R' = Red light ON
+- 'Y' = Yellow light ON
+- '0' = Light OFF
 
 # Example:
-Current time: 17:53:50 
- R             (5th row) 
+Current time: 17:53:50.  
+ R             (5th row)  
  RRR0          (4th row) 
  RR00          (3th row) 
  YYRYYRYYRY0   (2nd row) 
