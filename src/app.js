@@ -1,53 +1,52 @@
 export class Main {
-  updateFisrtRow(timestamp) {
-    let now = new Date();
-    let result = "";
+    
+    startBerlinClock(timestamp) {
+        let berlinClock = {
+          FifthRow: this.updateFifthRow(timestamp),
+          FourthRow: this.updateFourthRow(timestamp),
+          ThirdRow: this.updateThirdRow(timestamp),
+          SecondRow: this.updateSecondRow(timestamp),
+          FisrtRow: this.updateFirstRow(timestamp),
+        };
+        console.log(timestamp.getHours() +":"+timestamp.getMinutes()+":"+timestamp.getSeconds());
+        return berlinClock;
+      }
 
-    const lamp_allume = timestamp.getMinutes() % 5;
-    return "X".repeat(lamp_allume).padEnd(4, "0");
+  updateFirstRow(timestamp) {
+    let lightOn = timestamp.getMinutes() % 5;
+    return "X".repeat(lightOn).padEnd(4, "0");
   }
   updateSecondRow(timestamp) {
-    let now = new Date();
-    let result = "";
-    const lampeAllume = Math.floor(timestamp.getMinutes() / 5);
+    let secondRow = "";
+    let lightOn = Math.floor(timestamp.getMinutes() / 5);
     for (let i = 1; i <= 11; i++) {
-      if (i <= lampeAllume) {
-        if (i % 3 == 0) result += "Y";
-        else result += "X";
+      if (i <= lightOn) {
+        if (i % 3 == 0) secondRow += "Y";
+        else secondRow += "X";
       } else {
-        result += "0";
+        secondRow += "0";
       }
     }
-    return result;
+    return secondRow;
   }
 
   updateThirdRow(timestamp) {
-    const singleHours = timestamp.getHours() % 5;
+    let singleHours = timestamp.getHours() % 5;
     return "X".repeat(singleHours).padEnd(4, "0");
   }
 
   updateFourthRow(timestamp) {
-    const fiveHourBlocks = Math.floor(timestamp.getHours() / 5);
+    let fiveHourBlocks = Math.floor(timestamp.getHours() / 5);
     return "X".repeat(fiveHourBlocks).padEnd(4, "0");
   }
 
   updateFifthRow(timestamp) {
-    const seconde = timestamp.getSeconds();
+    let seconde = timestamp.getSeconds();
     if (seconde % 2 == 0) return "X";
     else return "0";
-  }
-
-  testFunction() {
-    let today = new Date();
-    return {
-      FifthRow: this.updateFifthRow(today),
-      FourthRow: this.updateFourthRow(today),
-      ThirdRow: this.updateThirdRow(today),
-      SecondRow: this.updateSecondRow(today),
-      FisrtRow: this.updateFisrtRow(today),
-    };
   }
 }
 
 let main = new Main();
-console.log(main.testFunction());
+let today = new Date();
+main.startBerlinClock(today);
